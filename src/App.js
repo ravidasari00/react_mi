@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -60,4 +60,3 @@ function App() {
 }
 
 export default App;
-  
