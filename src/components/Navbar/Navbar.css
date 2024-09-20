@@ -1,9 +1,19 @@
+/* Root styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  user-select: none; /* Prevent text selection across the whole page */
+}
+
+/* Navbar container */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 20px; /* Increase padding for more height */
-  height: 60px; /* Set an explicit height */
+  padding: 20px 20px;
+  height: 60px;
   background-color: #fff;
   box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -15,43 +25,35 @@
   box-sizing: border-box;
 }
 
-
-/* Reset margin and padding for the root HTML element */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-/* Styles for the logo image */
+/* Logo styles */
 .logo {
   height: 50px;
   width: 150px;
   cursor: pointer;
   transition: all 0.5s ease;
-  position: absolute; /* Position logo on the left side */
+  position: absolute;
   left: 20px;
 }
 
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Dark mode styles for logo */
 body.dark .logo {
   filter: invert(1);
 }
 
-.logo:hover {
-  transform: scale(1.05); /* Slightly enlarge the logo on hover */
-}
-
-/* Container for navigation items */
+/* Navbar content */
 .navbar-content {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center navigation items */
+  justify-content: center;
   flex: 1;
   position: relative;
 }
 
-/* Styles for the navigation items */
+/* Navbar items */
 .navbar ul {
   display: flex;
   list-style: none;
@@ -59,25 +61,21 @@ body.dark .logo {
   padding: 0;
 }
 
-/* Styles for the navigation items */
 .navbar ul li {
-  user-select: none; /* Prevent text selection */
-  cursor: pointer;   /* Ensure it looks clickable */
   margin: 0 20px;
-  cursor: pointer;
   font-size: 20px;
   font-weight: 700;
   color: rgb(240, 138, 101);
+  cursor: pointer;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Glow effect on hover */
 .navbar ul li:hover {
   color: #007bff;
   text-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
 }
 
-/* Styles for the toggle icon */
+/* Toggle theme icon */
 .toggle-icon {
   height: 30px;
   cursor: pointer;
@@ -85,7 +83,7 @@ body.dark .logo {
   right: 0;
 }
 
-/* Styles for hamburger menu */
+/* Hamburger menu icon */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -104,7 +102,7 @@ body.dark .logo {
   transition: background-color 0.3s;
 }
 
-/* Responsive design: Adjust navbar for smaller screens */
+/* Responsive styles */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: row;
@@ -114,7 +112,7 @@ body.dark .logo {
 
   .navbar-content {
     width: 100%;
-    justify-content: center; /* Center navigation items in mobile */
+    justify-content: center;
     margin: 0;
   }
 
@@ -128,24 +126,22 @@ body.dark .logo {
     left: 0;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 1001;
+    z-index: 1001; /* Ensure menu is on top of other elements */
     padding: 10px;
   }
 
   .navbar ul.show {
-    display: flex; /* Show menu when `isMenuOpen` is true */
-    animation: fadeIn 0.3s ease; /* Add a fade-in animation */
+    display: flex; /* Show menu when isMenuOpen is true */
+    animation: fadeIn 0.3s ease;
   }
 
   .navbar ul li {
     margin: 10px 0;
     text-align: left;
-    user-select: none; /* Prevent text selection */
-    cursor: pointer;
   }
 
   .hamburger {
-    display: flex; /* Show hamburger icon on mobile */
+    display: flex; /* Show hamburger on mobile */
     position: absolute;
     top: -10px;
     right: 15px;
@@ -156,11 +152,11 @@ body.dark .logo {
   }
 
   .dark .hamburger div {
-    background-color: #fff; /* Color for hamburger icon lines in dark mode */
+    background-color: #fff;
   }
 
   .dark .navbar ul {
-    background-color: #333; /* Dark background for the menu in dark mode */
+    background-color: #333;
   }
 
   .toggle-icon {
@@ -169,7 +165,7 @@ body.dark .logo {
   }
 }
 
-/* Dark mode styles */
+/* Dark mode for the navbar */
 .dark .navbar {
   background-color: #030303;
   color: #fff;
