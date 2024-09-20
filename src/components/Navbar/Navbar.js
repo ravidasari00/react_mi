@@ -21,11 +21,11 @@ const Navbar = ({ theme, setTheme, onNavClick }) => {
             <img src={theme === 'light' ? logo_light : logo_dark} alt="Logo" className="logo" />
             <div className="navbar-content">
                 <ul className={isMenuOpen ? 'show' : ''}>
-                    <li onClick={() => onNavClick('home')}>Home</li>
-                    <li onClick={() => onNavClick('about')}>About</li>
-                    <li onClick={() => onNavClick('services')}>Services</li>
-                    <li onClick={() => onNavClick('products')}>Products</li>
-                    <li onClick={() => onNavClick('contact')}>Contact</li>
+                    <li onClick={(e) => { e.stopPropagation(); onNavClick('home'); }}>Home</li>
+                    <li onClick={(e) => { e.stopPropagation(); onNavClick('about'); }}>About</li>
+                    <li onClick={(e) => { e.stopPropagation(); onNavClick('services'); }}>Services</li>
+                    <li onClick={(e) => { e.stopPropagation(); onNavClick('products'); }}>Products</li>
+                    <li onClick={(e) => { e.stopPropagation(); onNavClick('contact'); }}>Contact</li>
                     <li>
                         <img
                             onClick={toggleMode}
