@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Navbar.css';
 import logo_light from '../Assets/logo-blackk.png';
 import logo_dark from '../Assets/logo-blackk.png';
@@ -7,6 +7,24 @@ import toggle_dark from '../Assets/day.png';
 
 const Navbar = ({ theme, setTheme, onNavClick }) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  // Ensure the menu is closed when the user clicks outside or resizes
+  useEffect(() => {
+    const handleResizeOrClickOutside = (e) => {
+      // Close the menu if screen size changes or click happens outside the navbar
+      setIsMenuOpen(false);
+    };
+
+    // Listen for window resize or clicks outside
+    window.addEventListener('resize', handleResizeOrClickOutside);
+    document.addEventListener('click', handleResizeOrClickOutside);
+
+    return () => {
+      // Cleanup event listeners when the component unmounts
+      window.removeEventListener('resize', handleResizeOrClickOutside);
+      document.removeEventListener('click', handleResizeOrClickOutside);
+    };
+  }, []);
 
   const toggleMode = (e) => {
     e.preventDefault();
