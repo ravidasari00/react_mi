@@ -1,0 +1,84 @@
+/* Main container for the About component */
+.about-container {
+    display: flex;
+    flex-direction: row; /* Align image and content side by side */
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between; /* Space between image and content */
+    padding: 60px 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 1200px; /* Set a max width for the container */
+    margin: 0 auto; /* Center the container on the page */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    margin-top: 25%;
+  }
+  
+  /* Heading styles for About component */
+  .about-container h2 {
+    width: 100%; /* Full width to center the heading */
+    text-align: center; /* Center the heading text */
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    color: orangered;
+  }
+  
+  /* Image container styles */
+  .about-image {
+    flex: 1; /* Allow image container to take up available space */
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center the image within its container */
+    align-items: center; /* Center the image vertically */
+  }
+  
+  /* Image styles */
+  .about-image img {
+    max-width: 100%; /* Responsive image */
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Text content styles */
+  .about-content {
+    flex: 1; /* Allow content to take up available space */
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+  
+    .about-content,
+    .about-image {
+      width: 100%; /* Full width on smaller screens */
+      padding: 0;
+    }
+  
+    .about-content {
+      margin-bottom: 20px; /* Add spacing below the content */
+    }
+  }
+  
+  /* Dark theme specific styles */
+  body.dark .about-container {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+  
+  body.dark .about-container h2 {
+    color:orangered;
+  }
+  
+  body.dark .about-content,
+  body.dark .about-image {
+    color: #e0e0e0;
+  }
+  

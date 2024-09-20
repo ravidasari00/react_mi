@@ -1,0 +1,80 @@
+.services-container {
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 1%;
+}
+
+.services-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: var(--text-color);
+  color: orangered;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.service-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--background-color);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  width: 100%; /* Full width by default */
+  max-width: 300px; /* Max width for each service box */
+  margin: 0 auto; /* Center align */
+  position: relative; /* For positioning the icon */
+}
+
+.service-box:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.service-name {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  flex: 1;
+}
+
+/* Icon scaling effect */
+.service-icon {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover .service-icon {
+  transform: scale(2); /* Scale icon on hover */
+}
+
+/* Responsive styles */
+@media (min-width: 576px) {
+  .service-box {
+    width: calc(50% - 10px); /* Two items side by side with gap */
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid {
+    flex-direction: column;
+    align-items: center; /* Center the grid on small screens */
+  }
+
+  .service-box {
+    width: 100%; /* Full width on small screens */
+  }
+
+  .service-icon {
+    margin-top: 10px;
+  }
+}

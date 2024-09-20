@@ -1,0 +1,94 @@
+/* General container styles */
+.contact {
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Title section styles */
+.title {
+    text-align: center; /* Center the "Contact Us" heading */
+    margin-bottom: 40px; /* Adjust spacing if needed */
+}
+
+.title h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: orangered; /* Theme color */
+    margin: 0;
+}
+
+/* Contact grids styles */
+.contact-grids {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Address styles */
+.address {
+    flex: 1;
+    padding: 20px;
+}
+/* Address rows */
+.address-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Icon styles */
+.address-left {
+    font-size: 1.5rem;
+    color: orangered; /* Icon color */
+    margin-right: 15px;
+}
+
+/* Address details styles */
+.address-right {
+    flex: 1;
+}
+
+/* Contact form styles */
+.contact-form {
+    flex: 1;
+    padding: 20px;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: orangered; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: darkorange; /* Hover color */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .contact-grids {
+        flex-direction: row;
+    }
+
+    .contact-form {
+        margin-top: 0; /* Remove top margin for larger screens */
+    }
+}

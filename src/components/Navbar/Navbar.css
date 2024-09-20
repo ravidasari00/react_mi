@@ -1,0 +1,189 @@
+/* Basic styles for the navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 50px;
+  background-color: #fff; /* Light background for light mode */
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100vw; /* Ensure the navbar spans the full width of the viewport */
+  top: 0;
+  left: 0; /* Ensure it starts from the very left of the viewport */
+  z-index: 1000;
+  transition: background-color 0.5s, color 0.5s; /* Smooth transition for background and text color changes */
+  box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+/* Reset margin and padding for the root HTML element */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Styles for the logo image */
+.logo {
+  height: 50px; /* Adjust logo size */
+  width: 150px;
+  cursor: pointer; /* Make logo clickable */
+  transition: all 0.5s ease;
+  
+}
+body.dark .logo{
+  filter:invert(1);
+}
+.logo:hover {
+  transform: scale(1.05); /* Slightly enlarge the logo on hover */
+}
+
+/* Container for navigation items */
+.navbar-content {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Take up available space */
+  justify-content: center; /* Center the items */
+  margin-left: 0;
+  margin-right: auto;
+  position: relative; /* Ensure positioning for theme toggle icon */
+}
+
+/* Styles for the navigation items */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for the navigation items */
+.navbar ul li {
+  margin: 0 20px; /* Spacing between navigation items */
+  cursor: pointer; /* Make nav items clickable */
+  font-size: 20px;  
+  font-weight: 700;
+  color:rgb(240, 138, 101); /* Dark text color for light mode */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for text color and shadow */
+}
+
+/* Glow effect on hover */
+.navbar ul li:hover {
+  color: #007bff; /* Change color on hover */
+  text-shadow: 0 0 8px rgba(0, 123, 255, 0.6); /* Add a glow effect */
+}
+
+/* Styles for the toggle icon */
+.toggle-icon {
+  height: 30px; /* Adjust toggle icon size */
+  cursor: pointer; /* Make toggle icon clickable */
+  position: absolute; /* Position at the end */
+  right: 0; /* Align to the right */
+}
+
+/* Styles for hamburger menu */
+.hamburger {
+  display: none; /* Hide hamburger icon by default */
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 25px;
+  cursor: pointer;
+  z-index: 1002; /* Ensure it's above other elements */
+  position: absolute;
+  top: 15px; /* Adjust based on navbar padding */
+  right: 15px; /* Align to the right */
+}
+
+.hamburger div {
+  height: 3px;
+  background-color: #333;
+  transition: background-color 0.3s;
+}
+
+/* Responsive design: Adjust navbar for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Keep items in a row */
+    align-items: center;
+    padding: 10px;
+    width: 100vw; /* Ensure navbar spans full width on mobile */
+    left: 0; /* Ensure it starts from the very left of the viewport */
+  }
+
+  .navbar-content {
+    width: 100%; /* Take full width on mobile */
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    margin-left: 0; /* Remove margin-left on mobile */
+    margin-right: 0; /* Remove margin-right on mobile */
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    display: none; /* Hide menu by default on mobile */
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    background-color: #fff; /* Light background for light mode */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    padding: 10px;
+  }
+
+  .navbar ul.show {
+    display: flex; /* Show menu when .show class is added */
+  }
+
+  .navbar ul li {
+    margin: 10px 0; /* Spacing between nav items on smaller screens */
+    text-align: left; /* Align text to the left on mobile */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Spacing for logo on smaller screens */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon on mobile */
+    position: absolute;
+    top: -10px; /* Align with top padding */
+    right: 15px; /* Align to the right */
+
+  }
+
+  .hamburger div {
+    background-color: #070606; /* Color for hamburger icon lines */
+  }
+
+  .dark .hamburger div {
+    background-color: #fff; /* Color for hamburger icon lines in dark mode */
+  }
+
+  .dark .navbar ul {
+    background-color: #333; /* Dark background for the menu in dark mode */
+  }
+
+  .toggle-icon {
+    position: static; /* Reset position */
+    margin-left: auto; /* Move to the end */
+  }
+}
+
+/* Dark mode styles */
+.dark .navbar {
+  background-color: #030303; /* Dark background for dark mode */
+  color: #fff; /* Light text color for dark mode */
+}
+
+.dark .navbar ul li {
+  color: #fff; /* Ensure list items text color is white in dark mode */
+}
+
+.dark .navbar ul li:hover {
+  color: #007bff; /* Change hover color if needed */
+}

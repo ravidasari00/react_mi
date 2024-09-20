@@ -1,0 +1,68 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap');
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Body Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Theme Variables for Light Mode */
+:root {
+  --background-color: #ffffff;
+  --text-color: #333;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+}
+
+/* Theme Variables for Dark Mode */
+body.dark {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --link-color: #90caf9;
+  --link-hover-color: #42a5f5;
+}
+
+/* Container styles for light and dark modes */
+.container {
+  background: none; /* No background color for default */
+  max-width: 100%; /* Ensure container fits within viewport */
+  overflow-x: hidden; /* Prevent horizontal scroll within containers */
+}
+
+/* Add this new rule to ensure component-specific styles take precedence */
+.products-container * {
+  box-sizing: border-box;
+}
+
+/* Additional Styles to Ensure Full Height Layouts */
+html, body {
+  height: 100%;
+}
+
+.main-content {
+  min-height: calc(100vh - 60px); /* Adjust based on your navbar height */
+  padding: 20px; /* Adjust padding as needed */
+}
+
+/* Example of container to prevent overflow */
+.container-fluid {
+  max-width: 100%;
+  overflow: hidden; /* Prevent overflow */
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}

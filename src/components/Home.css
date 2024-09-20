@@ -1,0 +1,288 @@
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 20px 20px;
+    height: calc(100vh - 80px);
+    position: relative;
+    background-color: var(--background-color);
+    background-color: #e0ecf8;
+    z-index: 1;
+  }
+  
+  .home-content {
+    max-width: 50%;
+    z-index: 2;
+    margin-top: 25%;
+    text-align: center; /* Added for consistency */
+  }
+ 
+  .animated-text-wrapper {
+    width: 100%; /* Ensure the wrapper takes full width */
+    /* overflow-x: auto; Allow horizontal scrolling  */
+  }
+  
+/* Updated animated-text class */
+/* Box style for animated-text class */
+.animated-text {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  display: flex; /* Use flexbox for horizontal arrangement */
+  gap: 20px; /* Space between chords */
+  justify-content: center; /* Center the content */
+  padding: 15px; /* Add padding inside the box */
+  border: 2px solid var(--border-color, #ddd); /* Add border with a customizable color */
+  border-radius: 10px; /* Rounded corners for the box */
+  background-color: var(--box-bg-color, #f5f5f5); /* Background color of the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for theme change */
+}
+
+/* Dark theme specific styles for animated-text */
+body.dark .animated-text {
+  background-color: var(--dark-box-bg-color, #444); /* Dark background for dark theme */
+  border-color: var(--dark-border-color, #555); /* Darker border in dark theme */
+  color: var(--dark-text-color, #f0f0f0); /* Lighter text for dark theme */
+}
+
+/* Hover effects for animated-text */
+.animated-text:hover {
+  background-color: var(--hover-box-bg-color, #e0e0e0); /* Lighter background on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+  /* Updated chord styles */
+.chord {
+  display: flex;
+  flex-direction: column; /* Stack icons and text vertically */
+  align-items: center; /* Center align the content horizontally */
+  justify-content: center; /* Center align the content vertically */
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-align: center; /* Ensure text is centered */
+}
+
+/* Style for the icon image */
+.chord img {
+  width: 50px; /* Adjust size of the icon */
+  height: 50px; /* Adjust size of the icon */
+  margin-bottom: 10px; /* Space between icon and text */
+}
+
+/* Style for the text content */
+.chord span {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-color); /* Ensure this variable is defined */
+  margin-bottom: 10px;
+}
+
+  
+  
+  @keyframes slideIn {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    33% {
+      transform: translateX(-100%);
+    }
+    66% {
+      transform: translateX(-200%);
+    }
+  }
+  
+  .features-container {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    margin-top: 20px;
+    z-index: 2;
+    /* background-color: #e0ecf8; */
+  }
+  
+  .scrolling-features {
+    display: flex;
+    width: calc(200%);
+    animation: scroll-left 25s linear infinite;
+  }
+  
+  .feature {
+    flex: 0 0 auto;
+    text-align: center;
+    width: 150px;
+    margin: 0 10px;
+  }
+  
+  .feature img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .scroll-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+  
+  .dot.active {
+    opacity: 1;
+  }
+  
+  .home-background {
+    position: cover;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 50%;
+    margin-top: 10%;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .home-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* Light theme styles for h-content */
+  .h-content {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--light-bg-color, #f5f5f5); /* Default light background */
+    margin-bottom: 20px; /* Spacing consistency */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    border: 1px solid #ddd; /* Light gray border */
+    color: var(--text-color, #555); /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme change */
+  }
+/* Dark theme specific styles */
+body.dark .h-content {
+  background-color: var(--dark-bg-color, #333); /* Dark background for dark theme */
+  border-color: #444; /* Darker border in dark theme */
+  color: var(--dark-text-color, #f0f0f0); /* Lighter text for dark theme */
+}
+
+/* Styles for the h1 element */
+.h-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(to right, #007bff, hsl(193, 100%, 50%));
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  transition: text-shadow 0.3s ease; /* Smooth transition for text shadow change */
+}
+
+/* Styles for the paragraph element */
+.h-content p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: inherit; /* Inherit color from .h-content for theme adaptability */
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+  padding: 10px 0; /* Padding for additional spacing */
+}
+
+/* Hover effects for h-content */
+.h-content:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+  border-color: #ccc; /* Darker border color on hover */
+  transform: translateY(-5px); /* Slight lift on hover */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Additional styles for more interactive look */
+.h-content h1:hover {
+  color: #007bff; /* Change text color on hover */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.h-content p:hover {
+  color: #333; /* Darker text color on hover */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+  /* Media queries for smaller screens */
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .home-content {
+      max-width: 100%;
+      margin-top: 0;
+    }
+  
+    .home-content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .home-content p {
+      font-size: 1rem;
+    }
+  
+    .features-container {
+      width: 100%;
+    }
+  
+    .feature {
+      width: 100px;
+    }
+  
+    .scroll-dots {
+      margin-left: 0;
+      text-align: center;
+    }
+  
+     /* Adjusted h-content for smaller screens, removing !important */
+  .h-content {
+    padding: 20px;
+  }
+
+  /* Ensure dark theme overrides on smaller screens */
+  body.dark .h-content {
+    background-color: var(--dark-bg-color, #333); /* Ensure dark background for dark theme */
+    border-color: #444;
+    color: var(--dark-text-color, #f0f0f0);
+  }
+
+  .h-content h1, .h-content p {
+    color: var(--text-color); /* Use CSS variable for text color */
+  }
+  }
+  
