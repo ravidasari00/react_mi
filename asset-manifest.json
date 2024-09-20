@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react_mi/static/css/main.f39e3bc0.css",
+    "main.css": "/react_mi/static/css/main.8b184523.css",
     "main.js": "/react_mi/static/js/main.da92266a.js",
     "static/media/logo-blackk.png": "/react_mi/static/media/logo-blackk.1f6f0729c3d2033408c1.png",
     "static/media/medical-software.png": "/react_mi/static/media/medical-software.82f1b6bf39cb9948c568.png",
@@ -29,11 +29,11 @@
     "static/media/scalability-icon.png": "/react_mi/static/media/scalability-icon.3052679c770730320682.png",
     "static/media/chord-icon3.png": "/react_mi/static/media/chord-icon3.b8d7375f2946f4f5d702.png",
     "index.html": "/react_mi/index.html",
-    "main.f39e3bc0.css.map": "/react_mi/static/css/main.f39e3bc0.css.map",
+    "main.8b184523.css.map": "/react_mi/static/css/main.8b184523.css.map",
     "main.da92266a.js.map": "/react_mi/static/js/main.da92266a.js.map"
   },
   "entrypoints": [
-    "static/css/main.f39e3bc0.css",
+    "static/css/main.8b184523.css",
     "static/js/main.da92266a.js"
   ]
 }
