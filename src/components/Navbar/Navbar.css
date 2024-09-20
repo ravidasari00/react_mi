@@ -61,6 +61,8 @@ body.dark .logo {
 
 /* Styles for the navigation items */
 .navbar ul li {
+  user-select: none; /* Prevent text selection */
+  cursor: pointer;   /* Ensure it looks clickable */
   margin: 0 20px;
   cursor: pointer;
   font-size: 20px;
