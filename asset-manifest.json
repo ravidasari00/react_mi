@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react_mi/static/css/main.47e75f8b.css",
-    "main.js": "/react_mi/static/js/main.2d7e0935.js",
+    "main.css": "/react_mi/static/css/main.469c576e.css",
+    "main.js": "/react_mi/static/js/main.deb60077.js",
     "static/media/logo-blackk.png": "/react_mi/static/media/logo-blackk.1f6f0729c3d2033408c1.png",
     "static/media/medical-software.png": "/react_mi/static/media/medical-software.82f1b6bf39cb9948c568.png",
     "static/media/technology.png": "/react_mi/static/media/technology.5837f25ca26e0d6ad59d.png",
@@ -29,11 +29,11 @@
     "static/media/scalability-icon.png": "/react_mi/static/media/scalability-icon.3052679c770730320682.png",
     "static/media/chord-icon3.png": "/react_mi/static/media/chord-icon3.b8d7375f2946f4f5d702.png",
     "index.html": "/react_mi/index.html",
-    "main.47e75f8b.css.map": "/react_mi/static/css/main.47e75f8b.css.map",
-    "main.2d7e0935.js.map": "/react_mi/static/js/main.2d7e0935.js.map"
+    "main.469c576e.css.map": "/react_mi/static/css/main.469c576e.css.map",
+    "main.deb60077.js.map": "/react_mi/static/js/main.deb60077.js.map"
   },
   "entrypoints": [
-    "static/css/main.47e75f8b.css",
-    "static/js/main.2d7e0935.js"
+    "static/css/main.469c576e.css",
+    "static/js/main.deb60077.js"
   ]
 }
