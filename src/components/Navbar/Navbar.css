@@ -140,6 +140,8 @@ body.dark .logo {
   .navbar ul li {
     margin: 10px 0;
     text-align: left;
+    user-select: none; /* Prevent text selection */
+    cursor: pointer;
   }
 
   .hamburger {
